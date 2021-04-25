@@ -1,0 +1,55 @@
+/* Bubble Map */
+.marks .land {
+  fill: #ececec;
+}
+
+.marks .sphere {
+  fill: #fbfbfb;
+}
+
+.marks .interiors {
+  fill: none;
+  stroke: #d9dfe0;
+}
+
+.marks .graticules,
+.tick line {
+  fill: none;
+  stroke: #ececec;
+}
+
+.marks circle {
+  fill: #137b80;
+  opacity: 0.5;
+}
+
+/* Date Histogram */
+
+.xLabel {
+  text-anchor: middle;
+}
+
+.yLabel {
+  text-anchor: end;
+}
+
+.tick text {
+  fill: #635f5d;
+  font-size: 0.5em;
+}
+
+.marks rect {
+  fill: #137b80;
+}
+
+.axisLabel {
+  font-size: 0.5em;
+  fill: #635f5d;
+}
+
+/* Background Rectangle */
+
+.background {
+  fill: #fff;
+  opacity: 0.5;
+}

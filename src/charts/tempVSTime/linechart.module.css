@@ -1,0 +1,32 @@
+.xLabel {
+  text-anchor: middle;
+}
+
+.yLabel {
+  text-anchor: end;
+}
+
+.tick line {
+  stroke: #c0c0bb;
+}
+.tick text {
+  fill: #635f5d;
+  font-size: 1.2em;
+}
+
+.marks circle {
+  fill: #e6842a;
+}
+
+.marks path {
+  fill: none;
+  stroke: #e6842a;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.axisLabel {
+  font-size: 2.5em;
+  fill: #635f5d;
+}

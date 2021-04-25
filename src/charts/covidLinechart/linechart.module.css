@@ -1,0 +1,33 @@
+.marks {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+}
+
+.markerline {
+  stroke: red;
+  stroke-width: 2;
+}
+
+.markerLineText {
+  fill: red;
+  font-size: 1.5em;
+}
+
+/* Hide the external border of the axis */
+.axis path {
+  display: none;
+}
+
+/*
+Apply the style in the d3 functions in XAxis.js
+*/
+
+.mainTitle {
+  font-size: 2.4em;
+}
+
+.axisLabel {
+  font-size: 2em;
+  fill: rgb(122, 122, 122);
+}

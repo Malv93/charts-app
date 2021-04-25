@@ -1,0 +1,41 @@
+.xLabel {
+  text-anchor: middle;
+}
+
+.yLabel {
+  text-anchor: end;
+}
+
+.tick line {
+  stroke: #c0c0bb;
+}
+.tick text {
+  fill: #635f5d;
+  font-size: 1.2em;
+  cursor: default;
+}
+
+.axisLabel {
+  font-size: 2.5em;
+  fill: #635f5d;
+}
+
+/* Dropdown menu*/
+
+.dropdownsBox {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin: 10px auto 0;
+}
+
+.dropdownLabel {
+  color: #635f5d;
+  font-size: 2em;
+}
+
+.dropdown {
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 30px;
+}
