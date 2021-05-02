@@ -26,7 +26,14 @@
   stroke-linecap: round;
 }
 
-.axisLabel {
-  font-size: 2.5em;
+.axisLabel,
+.title {
   fill: #635f5d;
+}
+.axisLabel {
+  font-size: 1.8em;
+}
+
+.title {
+  font-size: 2.5em;
 }

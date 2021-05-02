@@ -1,6 +1,6 @@
 import React from "react";
 import { scaleBand, scaleLinear, max } from "d3";
-import styles from "./barchart.module.css";
+import styles from "./populationBarchart.module.css";
 import { useData } from "./useData";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
@@ -8,11 +8,14 @@ import { Marks } from "./Marks";
 import { format } from "d3";
 
 const width = 960;
-const height = 500;
-const margin = { top: 20, right: 20, bottom: 80, left: 240 };
+const height = 530;
+const margin = { top: 60, right: 20, bottom: 60, left: 250 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
-const xAxisLabelOffset = 60;
+const xAxisLabelOffset = 50;
+
+const title = "Population by Country";
+const yTitleOffset = -20;
 
 const xAxisTickFormat = (tickValue) =>
   format(".2s")(tickValue).replace("G", "B");
@@ -65,6 +68,14 @@ export const PopulationBarchart = () => {
           yValue={yValue}
           tooltipFormat={tooltipFormat}
         />
+        <text
+          x={innerWidth / 2}
+          y={yTitleOffset}
+          textAnchor="middle"
+          className={styles.title}
+        >
+          {title}
+        </text>
       </g>
     </svg>
   );

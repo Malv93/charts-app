@@ -11,14 +11,14 @@ import {
   select,
 } from "d3";
 import { useRef, useEffect, useMemo } from "react";
-import styles from "../migrantsChart.module.css";
+import styles from "../migrantsMap.module.css";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 
-const margin = { top: 0, right: 20, bottom: 20, left: 50 };
+const margin = { top: 0, right: 30, bottom: 20, left: 50 };
 
-const xAxisTickFormat = timeFormat("%m/%d/%Y");
+const xAxisTickFormat = timeFormat("%Y");
 
 const yValue = (d) => d["Total Dead and Missing"];
 const yAxisLabel = "Total Dead and Missing";

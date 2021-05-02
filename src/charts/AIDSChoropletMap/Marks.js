@@ -1,5 +1,5 @@
 import { geoNaturalEarth1, geoPath, geoGraticule } from "d3";
-import styles from "./AIDSChart.module.css";
+import styles from "./AIDSMap.module.css";
 
 const projection = geoNaturalEarth1();
 const path = geoPath(projection);
@@ -20,11 +20,11 @@ export const Marks = ({
       const d = rowByNumericCode.get(feature.id);
       return (
         <path
+          stroke="#a3a3a3"
           fill={d ? colorScale(colorValue(d)) : missingDataColor}
           d={path(feature)}
         />
       );
     })}
-    <path className={styles.interiors} d={path(interiors)} />
   </g>
 );

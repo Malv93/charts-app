@@ -1,4 +1,4 @@
-import styles from "./linechart.module.css";
+import styles from "./tempVSTimeLinechart.module.css";
 
 export const AxisBottom = ({
   xScale,

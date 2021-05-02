@@ -3,11 +3,19 @@ import { useWorldAtlas } from "./useWorldAtlas";
 import { useData } from "./useData";
 import { useCodes } from "./useCodes";
 import { Marks } from "./Marks";
+import styles from "./AIDSMap.module.css";
 
 const width = 960;
-const height = 500;
+const height = 530;
 
 const selectedYear = "2017";
+const margin = { top: 30, right: 0, left: 0, bottom: 0 };
+
+const innerWidth = width - margin.left - margin.right;
+const innerHeight = height - margin.top - margin.bottom;
+
+const title = "HIV/AIDS Infected People";
+const yTitleOffset = 0;
 
 export const AIDSMap = () => {
   const worldAtlas = useWorldAtlas();
@@ -49,12 +57,26 @@ export const AIDSMap = () => {
 
   return (
     <svg className="chart-container" viewBox={`0 0 ${width} ${height}`}>
-      <Marks
-        worldAtlas={worldAtlas}
-        rowByNumericCode={rowByNumericCode}
-        colorScale={colorScale}
-        colorValue={colorValue}
-      />
+      <g
+        transform={`translate(${margin.left}, ${margin.top})`}
+        width={innerWidth}
+        height={innerHeight}
+      >
+        <Marks
+          worldAtlas={worldAtlas}
+          rowByNumericCode={rowByNumericCode}
+          colorScale={colorScale}
+          colorValue={colorValue}
+        />
+        <text
+          x={width / 2}
+          y={yTitleOffset}
+          textAnchor="middle"
+          className={styles.title}
+        >
+          {title}
+        </text>
+      </g>
     </svg>
   );
 };

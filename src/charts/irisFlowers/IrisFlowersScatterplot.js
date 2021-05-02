@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { scaleLinear, extent, scaleOrdinal } from "d3";
-import styles from "./scatterplot.module.css";
+import styles from "./irisFlowerScatterplot.module.css";
 import { useData } from "./useData";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
@@ -11,7 +11,7 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
 const width = 960;
-const height = 500;
+const height = 530;
 const margin = { top: 20, right: 180, bottom: 80, left: 100 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;

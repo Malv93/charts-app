@@ -1,5 +1,5 @@
 .marks .land {
-  fill: #c7d4d6;
+  fill: #005d6e;
 }
 
 .marks .sphere {
@@ -8,7 +8,7 @@
 
 .marks .interiors {
   fill: none;
-  stroke: #2795a7;
+  stroke: #a5e0eb;
 }
 
 .marks .graticules {
@@ -16,7 +16,8 @@
   stroke: #a5e0eb;
 }
 
-.marks circle {
-  fill: #1d5b64;
-  opacity: 0.5;
+/* title */
+.title {
+  font-size: 1.8em;
+  fill: #635f5d;
 }

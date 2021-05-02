@@ -14,11 +14,18 @@
   font-size: 1.2em;
 }
 
-.marks rect {
-  fill: #137b80;
+.mark {
+  fill: #e3ba22;
 }
 
-.axisLabel {
-  font-size: 2.5em;
+.axisLabel,
+.title {
   fill: #635f5d;
+}
+.axisLabel {
+  font-size: 1.8em;
+}
+
+.title {
+  font-size: 2.5em;
 }

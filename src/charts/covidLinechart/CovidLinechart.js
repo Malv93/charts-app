@@ -4,11 +4,14 @@ import { scaleTime, extent, scaleLog, max, line } from "d3";
 import { XMarkerLine, YMarkerLine } from "./MarkerLines";
 import { XAxis, YAxis } from "./Axis";
 const width = 960;
-const height = 500;
+const height = 530;
 
 const margin = { top: 50, right: 20, bottom: 80, left: 120 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
+
+const title = "Global Coronavirus Deaths Over Time";
+const titleYOffset = -15;
 
 const xValue = (d) => d.date;
 const yValue = (d) => d.deathTotal;
@@ -54,12 +57,12 @@ export const CovidLinechart = () => {
           innerHeight={innerHeight}
         />
         <text
-          className={styles.mainTitle}
+          className={styles.title}
           x={innerWidth / 2}
-          y={-15}
+          y={titleYOffset}
           textAnchor="middle"
         >
-          Global Coronavirus Deaths Over Time
+          {title}
         </text>
         <text
           className={styles.axisLabel}

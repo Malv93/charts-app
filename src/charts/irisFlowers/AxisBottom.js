@@ -1,4 +1,4 @@
-import styles from "./scatterplot.module.css";
+import styles from "./irisFlowerScatterplot.module.css";
 
 export const AxisBottom = ({ xScale, innerHeight, tickOffset = 3 }) => {
   return xScale.ticks().map((tickValue) => (

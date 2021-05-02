@@ -1,4 +1,4 @@
-import styles from "./linechart.module.css";
+import styles from "./tempVSTimeLinechart.module.css";
 
 export const AxisLeft = ({ yScale, innerWidth, tickOffset = 3 }) => {
   return yScale.ticks().map((tickValue) => (

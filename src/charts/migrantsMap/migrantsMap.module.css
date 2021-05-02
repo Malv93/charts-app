@@ -42,9 +42,17 @@
   fill: #137b80;
 }
 
+.axisLabel,
+.title {
+  fill: #635f5d;
+}
+
 .axisLabel {
   font-size: 0.5em;
-  fill: #635f5d;
+}
+
+.title {
+  font-size: 1.8em;
 }
 
 /* Background Rectangle */

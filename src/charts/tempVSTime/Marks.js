@@ -1,4 +1,4 @@
-import styles from "./linechart.module.css";
+import styles from "./tempVSTimeLinechart.module.css";
 import { line, curveNatural } from "d3";
 
 export const Marks = ({

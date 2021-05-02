@@ -9,19 +9,22 @@ import {
   sum,
   max,
 } from "d3";
-import styles from "./histogram.module.css";
+import styles from "./migrantsHistogram.module.css";
 import { useData } from "./useData";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 
 const width = 960;
-const height = 500;
-const margin = { top: 20, right: 20, bottom: 80, left: 120 };
+const height = 530;
+const margin = { top: 60, right: 30, bottom: 80, left: 120 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 
-const xAxisTickFormat = timeFormat("%m/%d/%Y");
+const title = "Migrants Deaths by Month";
+const titleYOffset = -15;
+
+const xAxisTickFormat = timeFormat("%Y");
 
 export const MigrantsHistogram = () => {
   const data = useData();
@@ -67,7 +70,7 @@ export const MigrantsHistogram = () => {
           xScale={xScale}
           innerHeight={innerHeight}
           tickFormat={xAxisTickFormat}
-          tickOffset={5}
+          tickOffset={7}
         />
         <text
           className={styles.axisLabel}
@@ -87,6 +90,14 @@ export const MigrantsHistogram = () => {
           }) rotate(-90)`}
         >
           {yAxisLabel}
+        </text>
+        <text
+          className={styles.title}
+          x={innerWidth / 2}
+          y={titleYOffset}
+          textAnchor="middle"
+        >
+          {title}
         </text>
         <Marks
           binnedData={binnedData}

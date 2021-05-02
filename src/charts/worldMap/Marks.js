@@ -1,4 +1,4 @@
-import styles from "./map.module.css";
+import styles from "./worldMap.module.css";
 import { geoPath, geoNaturalEarth1, geoGraticule } from "d3";
 
 const projection = geoNaturalEarth1();

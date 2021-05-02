@@ -19,15 +19,14 @@
   display: none;
 }
 
-/*
-Apply the style in the d3 functions in XAxis.js
-*/
-
-.mainTitle {
-  font-size: 2.4em;
+.axisLabel,
+.title {
+  fill: #635f5d;
+}
+.axisLabel {
+  font-size: 1.8em;
 }
 
-.axisLabel {
-  font-size: 2em;
-  fill: rgb(122, 122, 122);
+.title {
+  font-size: 2.5em;
 }

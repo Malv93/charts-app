@@ -1,4 +1,4 @@
-import styles from "../migrantsChart.module.css";
+import styles from "../migrantsMap.module.css";
 
 export const AxisLeft = ({ yScale, innerWidth, tickOffset = 3 }) => {
   return yScale.ticks().map((tickValue) => (

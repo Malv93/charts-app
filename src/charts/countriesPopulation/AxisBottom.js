@@ -1,4 +1,4 @@
-import styles from "./barchart.module.css";
+import styles from "./populationBarchart.module.css";
 
 export const AxisBottom = ({ xScale, innerHeight, tickFormat }) => {
   return xScale.ticks().map((tickValue) => (

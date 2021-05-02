@@ -1,4 +1,4 @@
-import styles from "../migrantsChart.module.css";
+import styles from "../migrantsMap.module.css";
 
 export const Marks = ({
   binnedData,

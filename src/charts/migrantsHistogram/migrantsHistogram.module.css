@@ -14,11 +14,19 @@
   font-size: 1.2em;
 }
 
-.mark {
-  fill: #e3ba22;
+.marks rect {
+  fill: #137b80;
+}
+
+.axisLabel,
+.title {
+  fill: #635f5d;
 }
 
 .axisLabel {
+  font-size: 2em;
+}
+
+.title {
   font-size: 2.5em;
-  fill: #635f5d;
 }

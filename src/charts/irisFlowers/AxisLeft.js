@@ -1,4 +1,4 @@
-import styles from "./scatterplot.module.css";
+import styles from "./irisFlowerScatterplot.module.css";
 
 export const AxisLeft = ({ yScale, innerWidth, tickOffset = 3 }) => {
   return yScale.ticks().map((tickValue) => (

@@ -1,4 +1,4 @@
-import styles from "../migrantsChart.module.css";
+import styles from "../migrantsMap.module.css";
 import { geoPath, geoNaturalEarth1, geoGraticule } from "d3";
 import { useMemo } from "react";
 

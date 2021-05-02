@@ -1,4 +1,4 @@
-import styles from "./histogram.module.css";
+import styles from "./migrantsHistogram.module.css";
 
 export const AxisLeft = ({ yScale, innerWidth, tickOffset = 3 }) => {
   return yScale.ticks().map((tickValue) => (

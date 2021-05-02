@@ -1,16 +1,19 @@
 import React from "react";
 import { scaleLinear, scaleTime, extent, timeFormat } from "d3";
-import styles from "./linechart.module.css";
+import styles from "./tempVSTimeLinechart.module.css";
 import { useData } from "./useData";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 
 const width = 960;
-const height = 500;
-const margin = { top: 20, right: 20, bottom: 80, left: 100 };
+const height = 530;
+const margin = { top: 60, right: 20, bottom: 80, left: 100 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
+
+const title = "Weekly Temperature vs Time";
+const yTitleOffset = -20;
 
 const xAxisLabelOffset = 60;
 const xValue = (d) => d.timestamp;
@@ -77,6 +80,14 @@ export const TempVSTimeLinechart = () => {
           tooltipFormat={xAxisTickFormat}
           circleRadius={4}
         />
+        <text
+          x={innerWidth / 2}
+          y={yTitleOffset}
+          textAnchor="middle"
+          className={styles.title}
+        >
+          {title}
+        </text>
       </g>
     </svg>
   );

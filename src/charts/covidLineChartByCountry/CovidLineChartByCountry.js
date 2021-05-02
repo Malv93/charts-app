@@ -1,9 +1,8 @@
 import { useData } from "./useData";
-
-import { LineChart } from "./LineChart";
+import { Linechart } from "./Linechart";
 
 export const CovidLineChartByCountry = () => {
   const data = useData();
 
-  return data ? <LineChart data={data} /> : <div>Loading...</div>;
+  return data ? <Linechart data={data} /> : <div>Loading...</div>;
 };

@@ -6,16 +6,19 @@ import { Tooltip } from "./Tooltip";
 import styles from "./linechart.module.css";
 
 const width = 960;
-const height = 500;
+const height = 530;
 
-const margin = { top: 50, right: 20, bottom: 80, left: 120 };
+const margin = { top: 50, right: 20, bottom: 60, left: 90 };
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
+
+const title = "Coronavirus Deaths by Country";
+const titleYOffset = -15;
 
 const xValue = (d) => d.date;
 const yValue = (d) => d.deathTotal;
 
-export const LineChart = ({ data }) => {
+export const Linechart = ({ data }) => {
   const [activeRow, setActiveRow] = useState();
 
   const handleVoronoiHover = useCallback(setActiveRow, [setActiveRow]);
@@ -73,19 +76,31 @@ export const LineChart = ({ data }) => {
               )}, ${lineGenerator.y()(activeRow)})`}
             >
               <circle r="5" />
-              <Tooltip activeRow={activeRow} className={styles.tooltipStroke} />
-              <Tooltip activeRow={activeRow} className={styles.tooltip} />
+              <Tooltip
+                lineGenerator={lineGenerator}
+                activeRow={activeRow}
+                innerWidth={innerWidth}
+                innerHeight={innerHeight}
+                className={styles.tooltipStroke}
+              />
+              <Tooltip
+                lineGenerator={lineGenerator}
+                activeRow={activeRow}
+                innerWidth={innerWidth}
+                innerHeight={innerHeight}
+                className={styles.tooltip}
+              />
             </g>
           </g>
         )}
 
         <text
-          className={styles.mainTitle}
+          className={styles.title}
           x={innerWidth / 2}
-          y={-15}
+          y={titleYOffset}
           textAnchor="middle"
         >
-          Global Coronavirus Deaths Over Time By Country
+          {title}
         </text>
         <text
           className={styles.axisLabel}
@@ -96,7 +111,7 @@ export const LineChart = ({ data }) => {
         </text>
         <text
           className={styles.axisLabel}
-          transform={`translate(${innerWidth / 2}, ${innerHeight + 40}) `}
+          transform={`translate(${innerWidth / 2}, ${innerHeight + 20}) `}
           dominantBaseline="hanging"
           textAnchor="middle"
         >
